@@ -224,9 +224,10 @@ button:hover {
   display: none;
 }
 footer {
-  margin-top: 1.5rem;
   font-size: 0.8rem;
   color: #ededed5d;
+  margin: 1.5rem auto 0.5rem auto;
+  text-align: center;
 }
 
 footer a {
@@ -240,6 +241,9 @@ footer a:hover {
 @media only screen and (max-width: 500px) {
   h1 {
     width: 90%;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
   .container {
     width: 90%;

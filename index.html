@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="script.js"></script>
+    <script defer src="background.js"></script>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <h1>Password Generator</h1>
+    <div class="container">
+      <div class="password_wrap">
+        <h3 id="password">You password will be here...</h3>
+        <img src="./images/copy.png" alt="copy" class="copy" id="copy" />
+      </div>
+      <div class="copied_wrap">
+        <span id="copied">Password Copied!</span>
+      </div>
+      <form action="#" id="form">
+        <div class="option_wrap_main">
+          <label for="charactersAmount">Number of characters</label>
+          <div class="wrapper">
+            <input
+              type="range"
+              name="charactersAmount"
+              id="charactersAmountRange"
+              class="charactersAmount"
+              min="1"
+              max="50"
+              value="10"
+            />
+            <input
+              type="number"
+              name="charactersNumber"
+              id="charactersNumber"
+              class="charactersNumber"
+              min="1"
+              max="50"
+              value="10"
+            />
+          </div>
+        </div>
+        <div class="option_wrap">
+          <label for="includeUppercase">Include uppercase</label>
+          <input
+            type="checkbox"
+            name="includeUppercase"
+            id="includeUppercase"
+            class="checkbox"
+          />
+        </div>
+        <div class="option_wrap">
+          <label for="includeNumber">Include Numbers</label>
+          <input
+            type="checkbox"
+            name="includeNumber"
+            id="includeNumber"
+            class="checkbox"
+          />
+        </div>
+        <div class="option_wrap">
+          <label for="includeSymbol">Include Sumbols</label>
+          <input
+            type="checkbox"
+            name="includeSymbol"
+            id="includeSymbol"
+            class="checkbox"
+          />
+        </div>
+        <button type="submit" id="generate">Generate Password</button>
+      </form>
+    </div>
+    <footer>
+      Programmed and Desiged by
+      <a
+        href="https://www.linkedin.com/in/bartosz-kozecki-ba798a197/"
+        target="_blank"
+        >@bkkozecc</a
+      >. &copy; All rights reserved.
+    </footer>
+  </body>
+</html>

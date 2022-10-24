@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 24, 24);
+  position: relative;
+}
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
+.container {
+  width: 35vw;
+  border-radius: 7px;
+  background-color: rgb(45, 45, 45);
+  color: #ededed;
+  padding: 1.5rem;
+  border: 2px solid #000;
+}
+h1 {
+  width: 35vw;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, rgb(61, 60, 60), rgb(27, 25, 25));
+  border-radius: 7px;
+  margin-bottom: 2rem;
+  color: #ededed;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid #000;
+}
+.password_wrap {
+  width: 90%;
+  height: 4.5rem;
+  border: solid 3px #a8e890;
+  border-radius: 7px;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+}
+.copy {
+  width: 2rem;
+  filter: invert(99%) sepia(1%) saturate(6784%) hue-rotate(177deg)
+    brightness(127%) contrast(86%);
+  transition: all 0.2s;
+  opacity: 0;
+}
+.copy_active {
+  opacity: 1;
+}
+.copy:hover {
+  cursor: pointer;
+}
+
+.copied_wrap {
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-1rem);
+  transition: all 0.3s;
+}
+.copied_wrap--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.option_wrap_main {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.charactersAmount {
+  width: 100%;
+  height: 15px;
+  margin-right: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #a8e890 20%, rgb(26, 26, 26) 20%);
+  border-radius: 7px;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.charactersAmount::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 25px;
+  border-radius: 7px;
+  background-color: #ededed;
+  border: 1px solid rgb(45, 45, 45);
+}
+.charactersAmount::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 25px;
+  border-radius: 7px;
+  background-color: rgb(68, 255, 0);
+  border: 1px solid rgb(45, 45, 45);
+}
+.charactersAmount:active {
+  opacity: 1;
+}
+.charactersAmount:hover {
+  cursor: pointer;
+}
+.option_wrap {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+label {
+  font-size: 1.2rem;
+  width: 100%;
+}
+label:hover {
+  cursor: pointer;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  margin: 2rem 1rem 1rem 1rem;
+  background-color: #a8e890;
+  text-transform: uppercase;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(74, 74, 74);
+  transition: all 0.3s;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(135, 238, 97);
+}
+#charactersNumber {
+  border-radius: 7px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px solid #a8e890;
+  background-color: transparent;
+  color: #ededed;
+  font-weight: 700;
+}
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #ededed;
+  transition: all 0.2s;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox:hover {
+  cursor: pointer;
+}
+.checkbox:checked {
+  background-color: rgb(135, 238, 97);
+}
+.checkbox:checked::after {
+  display: block;
+}
+
+.checkbox::after {
+  font-family: "Font awesome 6 Free";
+  font-weight: 900;
+  content: "\f00c";
+  text-align: center;
+  display: none;
+}
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #ededed5d;
+}
+
+footer a {
+  color: #ededed5d;
+  transition: all 0.2s;
+}
+footer a:hover {
+  color: #ededed;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+  }
+  .checkbox {
+    padding: 1rem;
+  }
+}

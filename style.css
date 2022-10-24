@@ -39,7 +39,7 @@ h1 {
   padding: 1.5rem;
   background: linear-gradient(to bottom, rgb(61, 60, 60), rgb(27, 25, 25));
   border-radius: 7px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #ededed;
   text-transform: uppercase;
   text-align: center;
@@ -226,6 +226,7 @@ button:hover {
 footer {
   font-size: 0.8rem;
   color: #ededed5d;
+  padding: 0 0.5rem;
   margin: 1.5rem auto 0.5rem auto;
   text-align: center;
 }
@@ -250,5 +251,8 @@ footer a:hover {
   }
   .checkbox {
     padding: 1rem;
+  }
+  footer {
+    margin: 0.5rem auto;
   }
 }

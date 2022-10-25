@@ -34,7 +34,7 @@ function generatePassword(
 
   const passwordCharacters = [];
 
-  for (let i = 0; i < characterAmount; i++) {
+  for (let i = 0; i <= characterAmount; i++) {
     let character = charCodes[Math.floor(Math.random() * charCodes.length)];
     passwordCharacters.push(String.fromCharCode(character));
   }
@@ -58,7 +58,6 @@ function adjustRange(e) {
   range.style.background = `linear-gradient(to right,  	hsl(104, 66%, 74%) ${
     value * 2
   }%,hsl(0, 0%, 12%)${value * 2}%`;
-  console.log(value);
 }
 
 charactersValue.addEventListener("input", adjustRange);
